@@ -6,7 +6,7 @@ import MakeReview from '../MakeReview/MakeReview';
 const MyReview = () => {
     const [myReview, setMyReview] = React.useState([]);
     React.useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://polar-peak-09049.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setMyReview(data))
     }, [])

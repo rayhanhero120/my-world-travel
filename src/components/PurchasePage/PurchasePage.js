@@ -10,7 +10,7 @@ const PurchasePage = () => {
     const { productId } = useParams()
     const [product, setProduct] = useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${productId}`)
+        fetch(`https://polar-peak-09049.herokuapp.com/singleProduct/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
 
@@ -23,7 +23,7 @@ const PurchasePage = () => {
     const onSubmit = data => {
 
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://polar-peak-09049.herokuapp.com/order', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

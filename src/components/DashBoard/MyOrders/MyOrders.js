@@ -9,14 +9,14 @@ const MyOrders = () => {
     const [cancel, setCancel] = useState(false)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrders/${user?.email}`)
+        fetch(`https://polar-peak-09049.herokuapp.com/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
 
     }, [cancel])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteMyOrder/${id}`, {
+        fetch(`https://polar-peak-09049.herokuapp.com/deleteMyOrder/${id}`, {
             method: "DELETE",
         })
             .then(res => res.json())

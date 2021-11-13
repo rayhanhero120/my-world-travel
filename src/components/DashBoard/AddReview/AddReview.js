@@ -13,7 +13,7 @@ const AddReview = () => {
     const onSubmit = data => {
         data.name = user.displayName;
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://polar-peak-09049.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
